@@ -1,22 +1,24 @@
 /* ===== Reset & Base ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --deep-brown: #6B2D1A;
-  --maroon: #7B3A2B;
-  --coral: #D4726A;
-  --coral-light: #E8958E;
-  --burnt-orange: #C8764A;
-  --warm-tan: #D9A87C;
-  --cream: #FAF0E6;
-  --cream-dark: #F0E2D3;
-  --off-white: #FDF8F4;
-  --text-dark: #3A1A0E;
-  --text-mid: #6B4D3E;
+  --deep-brown: #6b2d1a;
+  --maroon: #7b3a2b;
+  --coral: #d4726a;
+  --coral-light: #e8958e;
+  --burnt-orange: #c8764a;
+  --warm-tan: #d9a87c;
+  --cream: #faf0e6;
+  --cream-dark: #f0e2d3;
+  --off-white: #fdf8f4;
+  --text-dark: #3a1a0e;
+  --text-mid: #6b4d3e;
   --white: #ffffff;
 }
 
@@ -25,7 +27,11 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: var(--text-dark);
   background: var(--off-white);
   line-height: 1.6;
@@ -109,7 +115,9 @@ a {
   padding: 10px 22px;
   border-radius: 24px;
   font-weight: 600 !important;
-  transition: background 0.2s, transform 0.2s !important;
+  transition:
+    background 0.2s,
+    transform 0.2s !important;
 }
 
 .nav-cta:hover {
@@ -126,29 +134,42 @@ a {
   justify-content: center;
   text-align: center;
   margin-top: 72px;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 40%, var(--warm-tan) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--cream) 0%,
+    var(--cream-dark) 40%,
+    var(--warm-tan) 100%
+  );
   overflow: hidden;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -60px;
   right: -80px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(212, 114, 106, 0.2) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(212, 114, 106, 0.2) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -40px;
   left: -60px;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(200, 118, 74, 0.15) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(200, 118, 74, 0.15) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
 }
 
@@ -220,52 +241,71 @@ a {
   line-height: 1.7;
 }
 
-/* ===== Mission ===== */
+/* ===== Hero quote ===== */
+.hero-quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--deep-brown);
+  /* border-left: 3px solid var(--coral); */
+  margin: 0 auto 32px;
+  padding: 10px 20px;
+  max-width: 520px;
+  text-align: center;
+  /* background: rgba(250, 240, 230, 0.6); */
+  /* border-radius: 0 8px 8px 0; */
+}
+
+/* ===== About / Mission ===== */
 .mission {
   background: var(--white);
 }
 
-.mission .section-title {
-  margin-bottom: 56px;
-}
-
-.mission-grid {
+.about-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  align-items: center;
 }
 
-.mission-card {
+.about-text .section-title {
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.mission-statement {
   background: var(--off-white);
-  border-radius: 16px;
-  padding: 40px 32px;
-  text-align: center;
   border: 1px solid var(--cream-dark);
-  transition: transform 0.25s, box-shadow 0.25s;
+  border-radius: 20px;
+  padding: 40px 36px;
+  text-align: center;
 }
 
-.mission-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(107, 45, 26, 0.08);
-}
-
-.mission-icon {
+.mission-statement-icon {
   font-size: 2rem;
   color: var(--coral);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.mission-card h3 {
-  font-size: 1.15rem;
+.mission-statement h3 {
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--deep-brown);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
 }
 
-.mission-card p {
-  font-size: 0.92rem;
+.mission-statement p {
+  font-size: 1rem;
   color: var(--text-mid);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ===== Impact ===== */
@@ -284,7 +324,9 @@ a {
   border-radius: 16px;
   padding: 36px 32px;
   border: 1px solid var(--cream-dark);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
 }
 
 .impact-card:hover {
@@ -333,7 +375,9 @@ a {
   background: var(--off-white);
   border-radius: 12px;
   border: 1px solid var(--cream-dark);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .sponsor-logo-box:hover {
@@ -452,9 +496,9 @@ a {
     padding: 64px 0;
   }
 
-  .mission-grid {
+  .about-layout {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 36px;
   }
 
   .impact-grid {
@@ -485,5 +529,218 @@ a {
 
   .logo-text {
     font-size: 0.95rem;
+  }
+}
+
+/* ===== Donate Page ===== */
+.donate-hero {
+  background: linear-gradient(
+    135deg,
+    var(--cream) 0%,
+    var(--cream-dark) 40%,
+    var(--warm-tan) 100%
+  );
+  padding: 120px 24px 80px;
+  text-align: center;
+}
+
+.donate-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--deep-brown);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.donate-hero p {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  max-width: 660px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.donate-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.donate-money {
+  text-align: center;
+}
+
+.donate-link {
+  text-decoration: underline;
+}
+
+.donate-money h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--deep-brown);
+  margin-bottom: 8px;
+}
+
+.donate-money p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.qr-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: var(--off-white);
+  border: 2px dashed var(--coral-light);
+  border-radius: 20px;
+  padding: 32px 40px;
+}
+
+.qr-placeholder {
+  width: 180px;
+  height: 180px;
+  background: var(--cream-dark);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Simple fake QR pattern using CSS */
+.qr-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  background-image:
+    linear-gradient(var(--deep-brown) 0 0),
+    linear-gradient(var(--deep-brown) 0 0),
+    linear-gradient(var(--deep-brown) 0 0),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 6px,
+      var(--deep-brown) 6px,
+      var(--deep-brown) 10px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 8px,
+      var(--deep-brown) 8px,
+      var(--deep-brown) 12px
+    );
+  background-size:
+    36px 36px,
+    36px 36px,
+    36px 36px,
+    100% 100%,
+    100% 100%;
+  background-position:
+    0 0,
+    100% 0,
+    0 100%,
+    0 0,
+    0 0;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
+  opacity: 0.18;
+}
+
+.qr-placeholder svg {
+  width: 120px;
+  height: 120px;
+  opacity: 0.55;
+}
+
+.qr-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  letter-spacing: 0.01em;
+}
+
+.qr-note {
+  font-size: 0.78rem;
+  color: var(--coral);
+  font-style: italic;
+}
+
+.donate-locations h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--deep-brown);
+  margin-bottom: 8px;
+}
+
+.donate-locations > p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.locations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.location-card {
+  background: var(--off-white);
+  border: 1px solid var(--cream-dark);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.location-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 45, 26, 0.07);
+}
+
+.location-icon {
+  font-size: 1.4rem;
+  color: var(--coral);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.location-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--deep-brown);
+  margin-bottom: 4px;
+}
+
+.location-info address {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .donate-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .donate-money {
+    order: -1;
   }
 }
