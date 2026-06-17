@@ -549,7 +549,7 @@ a {
     var(--cream-dark) 40%,
     var(--warm-tan) 100%
   );
-  padding: 120px 24px 80px;
+  padding: 104px 24px 56px;
   text-align: center;
 }
 
@@ -570,15 +570,20 @@ a {
 }
 
 .donate-section {
-  padding: 80px 0;
+  padding: 56px 0 64px;
   background: var(--white);
 }
 
 .donate-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  gap: 48px;
   align-items: start;
+}
+
+.donate-money {
+  position: sticky;
+  top: 88px;
 }
 
 .donate-money {
@@ -688,30 +693,30 @@ a {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--deep-brown);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .donate-locations > p {
   font-size: 0.92rem;
   color: var(--text-mid);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   line-height: 1.6;
 }
 
 .locations-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
 }
 
 .location-card {
   background: var(--off-white);
   border: 1px solid var(--cream-dark);
-  border-radius: 14px;
-  padding: 20px 24px;
+  border-radius: 12px;
+  padding: 12px 14px;
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 12px;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -726,44 +731,55 @@ a {
   font-size: 1.4rem;
   color: var(--coral);
   flex-shrink: 0;
-  margin-top: 2px;
+  line-height: 1;
+}
+
+.location-info {
+  min-width: 0;
 }
 
 .location-info h3 {
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--deep-brown);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  line-height: 1.25;
 }
 
 .location-badge {
   display: inline-block;
-  margin-left: 8px;
-  padding: 2px 8px;
+  margin-left: 6px;
+  padding: 1px 7px;
   border-radius: 999px;
   background: var(--coral);
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 .location-info address {
   font-style: normal;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: var(--text-mid);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
   .donate-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
 
   .donate-money {
     order: -1;
+    position: static;
+  }
+
+  .locations-list {
+    grid-template-columns: 1fr;
   }
 }
